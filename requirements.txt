@@ -28,7 +28,6 @@ pyparsing==2.4.7
 pyrsistent==0.18.0
 python-dateutil==2.8.2
 pytz==2021.1
-pywin32==301
 pyzmq==22.1.0
 six==1.16.0
 testpath==0.5.0
