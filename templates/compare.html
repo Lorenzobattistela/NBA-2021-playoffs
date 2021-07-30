@@ -1,19 +1,15 @@
 {% extends "layout.html" %} {% block main %}
-<form action="/search" method="POST">
-  <label for="Teams">Choose a Team from 2021 Playoffs</label>
-  <select id="teams" name="teams">
+<form action="/compare" method="POST">
+  <label for="players">Choose a Team from 2021 Playoffs</label>
+  <select id="firstPlayer" name="firstPlayer">
     <option value="" name="disabled" disabled selected></option>
-    {% for team in teams %}
-    <option value="{{ team }}">{{ team }}</option>
+    {% for player in players %}
+    <option value="{{ player }}">{{ player }}</option>
     {% endfor %}
   </select>
 
-  <button name="submit" type="submit" class="btn btn-primary botão">
-    Search
-  </button>
-
-  <label for="Players">Choose a Player from 2021 Playoffs</label>
-  <select id="players" name="player">
+  <label for="Players">Choose another Player from 2021 Playoffs</label>
+  <select id="players" name="secondPlayer">
     <option value="" name="disabled" disabled selected></option>
     {% for player in players %}
     <option value="{{ player }}">{{ player }}</option>
